@@ -13,6 +13,7 @@
 }
 
 .item {
+  overflow-wrap: anywhere;
   text-align: left;
   padding: 10px;
   background-color: #5b5b5b;
@@ -168,7 +169,7 @@ textarea:invalid {
  * //////////////////////////////////////////////////////////////////////////////////////////////////
  */
 main div:nth-child(2) {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: center;
   gap: 20px;
 }
@@ -181,7 +182,8 @@ main div:nth-child(2) button {
   box-shadow: 0 0 3px #00e5e5;
   transition: all ease 1s;
   padding: 4px 10px;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
   resize: none;
   background-color: black;
   color: white;
@@ -211,6 +213,7 @@ main div:last-child {
 }
 
 ul {
+  border: solid 1px white;
   display: flex;
   flex-direction: column;
   gap: 5px;

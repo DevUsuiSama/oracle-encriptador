@@ -23,6 +23,7 @@ function controlarTexto(encriptador, lambda) {
 function main(proceso) {
   const TEXTAREA = document.getElementById("text");
   const ENCRIPTADOR = new Encriptador(TEXTAREA.value);
+  const LISTA = document.getElementById("lista");
 
   switch (proceso) {
     case 0:
@@ -30,8 +31,6 @@ function main(proceso) {
       break;
     case 1:
       controlarTexto(ENCRIPTADOR, () => {
-        const LISTA = document.getElementById("lista");
-
         if (estadoLista) {
           LISTA.removeChild(LISTA.children[0]);
           estadoLista = false;
@@ -48,8 +47,6 @@ function main(proceso) {
       break;
     case 2:
       controlarTexto(ENCRIPTADOR, () => {
-        const LISTA = document.getElementById("lista");
-
         if (estadoLista) {
           LISTA.removeChild(LISTA.children[0]);
           estadoLista = false;
@@ -65,7 +62,7 @@ function main(proceso) {
       });
       break;
     default:
-      console.error("disculpa flaco pero el proceso solicitado no existe");
+      console.error("Disculpe, pero el proceso solicitado no existe");
       break;
   }
 }

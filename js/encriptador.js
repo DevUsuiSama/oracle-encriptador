@@ -30,6 +30,7 @@ class Encriptador {
   }
 
   estaSinCaracteresEspeciales() {
+    // ?
     return this.texto === this.texto.replace(/[^\w\s]/gi, "");
   }
 
