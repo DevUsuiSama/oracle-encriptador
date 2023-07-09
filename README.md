@@ -6,7 +6,7 @@ Este proyecto fue desarrollador durante el curso de Alura, la cual trata de una 
 
 ## Previsualización
 
-![alt](img/Capture-Encriptador-Desencriptador.png)
+![alt](assets/img/Capture-Encriptador-Desencriptador.png)
 
 ## Construido con 🛠️
 
