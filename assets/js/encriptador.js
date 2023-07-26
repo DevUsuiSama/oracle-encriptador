@@ -4,34 +4,14 @@
  * Copyright (c) 2023 UsuiSama
  */
 
-class Encriptador {
+import Texto from "./texto.js";
+
+export default class Encriptador extends Texto {
   /**
    * @param {string} texto
    */
   constructor(texto) {
-    this.texto = texto;
-  }
-
-  estaVacio() {
-    // ?
-    return this.texto === "";
-  }
-
-  estaEnMinuscula() {
-    // ?
-    return this.texto === this.texto.toLowerCase();
-  }
-
-  estaSinAcentos() {
-    // ?
-    return (
-      this.texto === this.texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    );
-  }
-
-  estaSinCaracteresEspeciales() {
-    // ?
-    return this.texto === this.texto.replace(/[^\w\s]/gi, "");
+    super(texto);
   }
 
   encriptar() {

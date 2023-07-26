@@ -89,12 +89,22 @@ header {
   padding: 20px;
   height: 50px;
   display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
   align-items: center;
   background-color: black;
   border-radius: 5px;
 }
 
-header > h1 {
+header:first-child {
+  grid-column: 1;
+}
+
+header:last-child {
+  grid-column: 2;
+}
+
+header div h1 {
   font-size: 2rem;
   color: white;
   text-shadow: 2px 2px 3px white;
@@ -103,15 +113,16 @@ header > h1 {
 @media screen and (max-width: 768px) {
   header {
     justify-content: center;
+    gap: 5px;
   }
 
-  header > h1 {
+  header div h1 {
     font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 280px) {
-  header > h1 {
+  header div h1 {
     font-size: 0.8rem;
   }
 }
@@ -174,6 +185,7 @@ main div:nth-child(2) {
   gap: 20px;
 }
 
+header div button,
 main div:nth-child(2) button {
   height: 38px;
   appearance: none;
@@ -191,9 +203,10 @@ main div:nth-child(2) button {
   transition: all 1s ease;
 }
 
+header div button:hover,
 main div:nth-child(2) button:hover {
   background-color: #00cccc;
-  border: solid 2px #00b7b7;
+  border: solid 1px #00b7b7;
   box-shadow: 0 0 3px #00b7b7;
 }
 

@@ -8,6 +8,10 @@ Este proyecto fue desarrollador durante el curso de Alura, la cual trata de una 
 
 ![alt](assets/img/Capture-Encriptador-Desencriptador.png)
 
+## Copiar Texto
+
+Para copiar el texto resultantes del proceso de encriptado, solamente hay que darle un click al elemento que desee copiar.
+
 ## Construido con 🛠️
 
 * HTML5

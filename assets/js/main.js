@@ -4,25 +4,44 @@
  * Copyright (c) 2023 UsuiSama
  */
 
-function main(proceso) {
-  const TEXTAREA = document.getElementById("text");
+import Encriptador from "./encriptador.js";
+import Lista from "./lista.js";
+import Modo from "./modo.js";
 
-  switch (proceso) {
-    case 0:
-      TEXTAREA.value = "";
-      break;
-    case 1:
-      agregarItem(TEXTAREA, (encriptador) => {
-        return encriptador.encriptar();
-      });
-      break;
-    case 2:
-      agregarItem(TEXTAREA, (encriptador) => {
-        return encriptador.desencriptar();
-      });
-      break;
-    default:
-      console.error("Disculpe, pero el proceso solicitado no existe");
-      break;
-  }
+function main() {
+  const T_BUTTON = document.getElementById("modo");
+  const T_DIV = document.getElementById("lista-de-botones");
+  const T_UL = document.getElementById("lista-encriptado-desencriptado");
+  const T_TEXTAREA = document.getElementById("texto");
+  const MODO = new Modo(document.body, T_BUTTON);
+
+  T_BUTTON.addEventListener("click", () => {
+    MODO.alternar();
+  });
+
+  T_DIV.children[0].addEventListener("click", () => {
+    T_TEXTAREA.value = "";
+  });
+
+  T_DIV.children[1].addEventListener("click", () => {
+    const LISTA = new Lista(
+      T_UL,
+      new Encriptador(T_TEXTAREA.value)
+    );
+    LISTA.agregar((encriptador) => {
+      return encriptador.encriptar();
+    });
+  });
+
+  T_DIV.children[2].addEventListener("click", () => {
+    const LISTA = new Lista(
+      T_UL,
+      new Encriptador(T_TEXTAREA.value)
+    );
+    LISTA.agregar((encriptador) => {
+      return encriptador.desencriptar();
+    });
+  });
 }
+
+main();
