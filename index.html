@@ -1,0 +1,62 @@
+<!--
+ Created on Sat May 27 2023
+ Copyright (c) 2023 UsuiSama
+-->
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Usui, José Fernando">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Encriptador-Desencriptador">
+    <meta property="og:description" content="App básico para encriptar y desencriptar">
+    <meta property="og:type" content="website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador-Desencriptador</title>
+    <meta name="theme-color" content="#00FFFF">
+    <link rel="shortcut icon" href="assets/icon/crypto.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <header class="box-shadow-white">
+        <div>
+            <h1 class="font-orbitron">Encriptador-Desencriptador</h1>
+        </div>
+        <div>
+            <button id="modo" class="font-orbitron">Light</button>
+        </div>
+    </header>
+    <main class="box-shadow-white">
+        <div>
+            <textarea name="text" id="texto" cols="30" rows="10" maxlength="500" required></textarea>
+        </div>
+        <div id="lista-de-botones">
+            <button class="font-orbitron" title="Limpiar el area de texto">Limpiar</button>
+            <button class="font-orbitron">Encriptar</button>
+            <button class="font-orbitron">Desencriptar</button>
+        </div>
+        <div>
+            <ul id="lista-encriptado-desencriptado">
+                <li class="font-orbitron">
+                    >> No hay nada encriptado. 😐 &#60;&#60;
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!-- script -->
+    <script type="module" src="assets/js/main.js"></script>
+    <!-- ------ -->
+    <footer class="box-shadow-white font-orbitron">
+        @DevUsuiSama 2023&nbsp;&nbsp;||
+        <a href="https://www.flaticon.es/iconos-gratis/descentralizado" title="descentralizado iconos">
+            Descentralizado iconos creados por Soni Sokell - Flaticon
+        </a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+/*
+ * Created on Sat May 27 2023
+ *
+ * Copyright (c) 2023 UsuiSama
+ */
+
+.font-orbitron {
+  font-family: "Orbitron";
+}
+
+.box-shadow-white {
+  box-shadow: 0 0 3px 0 white;
+}
+
+.item {
+  overflow-wrap: anywhere;
+  text-align: left;
+  padding: 10px;
+  background-color: #5b5b5b;
+  border: solid 1px #ffffff;
+  box-shadow: 0 0 3px 0 white;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.item:hover {
+  background-color: #484848;
+  border: solid 1px #cccccc;
+  box-shadow: 0 0 3px 0 #cccccc;
+}
+
+a:link {
+  color: cyan;
+}
+
+a:visited {
+  color: yellow;
+}
+
+a:hover {
+  color: lime;
+}
+
+a:active {
+  color: red;
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ * ___________                    __          
+ * \_   _____/_ __   ____   _____/  |_  ____  
+ *  |    __)|  |  \_/ __ \ /    \   __\/ __ \ 
+ *  |     \ |  |  /\  ___/|   |  \  | \  ___/ 
+ *  \___  / |____/  \___  >___|  /__|  \___  >
+ *      \/              \/     \/          \/ 
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+@font-face {
+  font-family: "Orbitron";
+  src: url("../font/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ * __________           .___      
+ * \______   \ ____   __| _/__.__.
+ *  |    |  _//  _ \ / __ <   |  |
+ *  |    |   (  <_> ) /_/ |\___  |
+ *  |______  /\____/\____ |/ ____|
+ *         \/            \/\/     
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+body {
+  background-color: #191919;
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ * ___________                   ___.                              .___      
+ * \_   _____/ ____   ____ _____ \_ |__   ____ _____________     __| _/____  
+ *  |    __)_ /    \_/ ___\\__  \ | __ \_/ __ \\___   /\__  \   / __ |/  _ \ 
+ *  |        \   |  \  \___ / __ \| \_\ \  ___/ /    /  / __ \_/ /_/ (  <_> )
+ * /_______  /___|  /\___  >____  /___  /\___  >_____ \(____  /\____ |\____/ 
+ *        \/     \/     \/     \/    \/     \/      \/     \/      \/       
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+header {
+  margin: 5px;
+  padding: 20px;
+  height: 50px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+}
+
+header:first-child {
+  grid-column: 1;
+}
+
+header:last-child {
+  grid-column: 2;
+}
+
+header div h1 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 3px white;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  header div h1 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  header div h1 {
+    font-size: 0.8rem;
+  }
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ *    _____         .__        
+ *   /     \ _____  |__| ____  
+ *  /  \ /  \\__  \ |  |/    \ 
+ * /    Y    \/ __ \|  |   |  \
+ * \____|__  (____  /__|___|  /
+ *         \/     \/        \/ 
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+footer,
+main {
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: black;
+}
+
+main div {
+  padding: 10px;
+  display: grid;
+}
+
+textarea {
+  appearance: none;
+  outline: none;
+  border: solid 2px lime;
+  box-shadow: 0 0 3px lime;
+  transition: all ease 1s;
+  padding: 4px 10px;
+  font-size: 1rem;
+  resize: none;
+  background-color: black;
+  color: white;
+}
+
+textarea:invalid {
+  border: solid 2px red;
+  box-shadow: 0 0 3px red;
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ * __________        __    __                 
+ * \______   \__ ___/  |__/  |_  ____   ____  
+ *  |    |  _/  |  \   __\   __\/  _ \ /    \ 
+ *  |    |   \  |  /|  |  |  | (  <_> )   |  \
+ *  |______  /____/ |__|  |__|  \____/|___|  /
+ *         \/                              \/ 
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+main div:nth-child(2) {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  gap: 20px;
+}
+
+header div button,
+main div:nth-child(2) button {
+  height: 38px;
+  appearance: none;
+  outline: none;
+  border: solid 1px #00e5e5;
+  box-shadow: 0 0 3px #00e5e5;
+  transition: all ease 1s;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  resize: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+header div button:hover,
+main div:nth-child(2) button:hover {
+  background-color: #00cccc;
+  border: solid 1px #00b7b7;
+  box-shadow: 0 0 3px #00b7b7;
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ * .____    .__          __          
+ * |    |   |__| _______/  |______   
+ * |    |   |  |/  ___/\   __\__  \  
+ * |    |___|  |\___ \  |  |  / __ \_
+ * |_______ \__/____  > |__| (____  /
+ *         \/       \/            \/ 
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+main div:last-child {
+  height: 200px;
+  overflow: auto;
+}
+
+ul {
+  border: solid 1px white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  color: white;
+  background-color: #333333;
+}
+
+ul li {
+  text-align: center;
+}
+
+/*
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ *___________            __                
+ *\_   _____/___   _____/  |_  ___________ 
+ * |    __)/  _ \ /  _ \   __\/ __ \_  __ \
+ * |     \(  <_> |  <_> )  | \  ___/|  | \/
+ * \___  / \____/ \____/|__|  \___  >__|   
+ *     \/                         \/       
+ * //////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+footer {
+  color: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
