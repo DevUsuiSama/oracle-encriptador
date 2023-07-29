@@ -12,6 +12,10 @@ Este proyecto fue desarrollado durante el curso de Alura, la cual trata de una s
 
 Para copiar el texto resultantes del proceso de encriptado, solamente hay que darle un click al elemento que desee copiar.
 
+## Insignia [Alura Challenges]
+
+![alt](assets/img/cms_files_10224_1671210503Prancheta_3.png)
+
 ## Construido con 🛠️
 
 * HTML5
