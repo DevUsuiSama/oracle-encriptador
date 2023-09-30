@@ -27,8 +27,8 @@ Estas clases por el momento solo hace uso de colores monocromáticos.
 }
 ```
 
-Clase responsable de realizar el cambio de modo.
 #### JS
+Clase responsable de realizar el cambio de modo.
 ```js
 export default class Modo {
   body;
