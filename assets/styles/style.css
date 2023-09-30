@@ -4,254 +4,175 @@
  * Copyright (c) 2023 UsuiSama
  */
 
-.font-orbitron {
-  font-family: "Orbitron";
+.modo--light {
+  --color-foreground: #2b2c2c;
+  --color-background: #fbfbfc;
 }
 
-.box-shadow-white {
-  box-shadow: 0 0 3px 0 white;
+.modo--dark {
+  --color-foreground: #fbfbfc;
+  --color-background: #2b2c2c;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-background);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px var(--color-foreground);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-background) 40%, var(--color-foreground) 40%);
+  border-radius: 10px;
+}
+
+.link:link {
+  color: var(--color-foreground);
 }
 
 .item {
   overflow-wrap: anywhere;
   text-align: left;
-  padding: 10px;
-  background-color: #5b5b5b;
-  border: solid 1px #ffffff;
-  box-shadow: 0 0 3px 0 white;
+  padding: 20px;
+  border: 1px solid var(--color-foreground);
+  border-radius: 5px;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   cursor: pointer;
-  transition: all 1s ease;
+  transition: background-color 1s cubic-bezier(0.86, 0, 0.07, 1), color 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .item:hover {
-  background-color: #484848;
-  border: solid 1px #cccccc;
-  box-shadow: 0 0 3px 0 #cccccc;
+  background-color: var(--color-foreground);
+  color: var(--color-background);
 }
 
-a:link {
-  color: cyan;
-}
-
-a:visited {
-  color: yellow;
-}
-
-a:hover {
-  color: lime;
-}
-
-a:active {
-  color: red;
-}
-
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- * ___________                    __          
- * \_   _____/_ __   ____   _____/  |_  ____  
- *  |    __)|  |  \_/ __ \ /    \   __\/ __ \ 
- *  |     \ |  |  /\  ___/|   |  \  | \  ___/ 
- *  \___  / |____/  \___  >___|  /__|  \___  >
- *      \/              \/     \/          \/ 
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
 @font-face {
-  font-family: "Orbitron";
-  src: url("../font/Orbitron/Orbitron-VariableFont_wght.ttf");
+  font-family: orbitron;
+  src: url('../font/Orbitron/Orbitron-VariableFont_wght.ttf');
 }
 
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- * __________           .___      
- * \______   \ ____   __| _/__.__.
- *  |    |  _//  _ \ / __ <   |  |
- *  |    |   (  <_> ) /_/ |\___  |
- *  |______  /\____/\____ |/ ____|
- *         \/            \/\/     
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
 body {
-  background-color: #191919;
+  box-sizing: border-box;
+  background-color: var(--color-foreground);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- * ___________                   ___.                              .___      
- * \_   _____/ ____   ____ _____ \_ |__   ____ _____________     __| _/____  
- *  |    __)_ /    \_/ ___\\__  \ | __ \_/ __ \\___   /\__  \   / __ |/  _ \ 
- *  |        \   |  \  \___ / __ \| \_\ \  ___/ /    /  / __ \_/ /_/ (  <_> )
- * /_______  /___|  /\___  >____  /___  /\___  >_____ \(____  /\____ |\____/ 
- *        \/     \/     \/     \/    \/     \/      \/     \/      \/       
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
-header {
-  margin: 5px;
-  padding: 20px;
-  height: 50px;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(2, auto);
+.header {
+  padding: 40px;
   align-items: center;
-  background-color: black;
-  border-radius: 5px;
+  grid-template-columns: 1fr auto;
+  background-color: var(--color-background);
 }
 
-header:first-child {
-  grid-column: 1;
+.button {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  cursor: pointer;
+  transition: background-color 1s cubic-bezier(0.86, 0, 0.07, 1), color 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-header:last-child {
-  grid-column: 2;
+.button:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
 }
 
-header div h1 {
-  font-size: 2rem;
-  color: white;
-  text-shadow: 2px 2px 3px white;
+.text {
+  font-family: orbitron;
+  color: var(--color-foreground);
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    justify-content: center;
-    gap: 5px;
-  }
-
-  header div h1 {
-    font-size: 1rem;
-  }
+.text--center {
+  text-align: center;
 }
 
-@media screen and (max-width: 280px) {
-  header div h1 {
-    font-size: 0.8rem;
-  }
+.text--bold {
+  font-weight: bold;
 }
 
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- *    _____         .__        
- *   /     \ _____  |__| ____  
- *  /  \ /  \\__  \ |  |/    \ 
- * /    Y    \/ __ \|  |   |  \
- * \____|__  (____  /__|___|  /
- *         \/     \/        \/ 
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
-footer,
-main {
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color: black;
+.text--larger {
+  font-size: x-large;
 }
 
-main div {
-  padding: 10px;
-  display: grid;
+.text-small {
+  font-size: small;
 }
 
-textarea {
-  appearance: none;
-  outline: none;
-  border: solid 2px lime;
-  box-shadow: 0 0 3px lime;
-  transition: all ease 1s;
-  padding: 4px 10px;
-  font-size: 1rem;
-  resize: none;
-  background-color: black;
-  color: white;
+.crypter {
+  background-color: var(--color-background);
+  grid-template-rows: 1fr auto 1fr;
 }
 
-textarea:invalid {
-  border: solid 2px red;
-  box-shadow: 0 0 3px red;
-}
-
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- * __________        __    __                 
- * \______   \__ ___/  |__/  |_  ____   ____  
- *  |    |  _/  |  \   __\   __\/  _ \ /    \ 
- *  |    |   \  |  /|  |  |  | (  <_> )   |  \
- *  |______  /____/ |__|  |__|  \____/|___|  /
- *         \/                              \/ 
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
-main div:nth-child(2) {
+.crypter__division--columns {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: center;
   gap: 20px;
 }
 
-header div button,
-main div:nth-child(2) button {
-  height: 38px;
-  appearance: none;
+.text-area {
   outline: none;
-  border: solid 1px #00e5e5;
-  box-shadow: 0 0 3px #00e5e5;
-  transition: all ease 1s;
   padding: 4px 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  font-size: 1rem;
   resize: none;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  transition: all 1s ease;
+  background-color: var(--color-background);
 }
 
-header div button:hover,
-main div:nth-child(2) button:hover {
-  background-color: #00cccc;
-  border: solid 1px #00b7b7;
-  box-shadow: 0 0 3px #00b7b7;
-}
-
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- * .____    .__          __          
- * |    |   |__| _______/  |______   
- * |    |   |  |/  ___/\   __\__  \  
- * |    |___|  |\___ \  |  |  / __ \_
- * |_______ \__/____  > |__| (____  /
- *         \/       \/            \/ 
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
-main div:last-child {
-  height: 200px;
+.list {
+  box-shadow: inset 0 0 5px 0 var(--color-foreground);
+  height: 40vh;
   overflow: auto;
-}
-
-ul {
-  border: solid 1px white;
-  display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 20px;
-  color: white;
-  background-color: #333333;
+  padding: 2px;
 }
 
-ul li {
-  text-align: center;
+.footer {
+  padding: 20px;
+  background-color: var(--color-background);
 }
 
-/*
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- *___________            __                
- *\_   _____/___   _____/  |_  ___________ 
- * |    __)/  _ \ /  _ \   __\/ __ \_  __ \
- * |     \(  <_> |  <_> )  | \  ___/|  | \/
- * \___  / \____/ \____/|__|  \___  >__|   
- *     \/                         \/       
- * //////////////////////////////////////////////////////////////////////////////////////////////////
- */
-footer {
-  color: white;
-  padding: 20px;
-  margin-bottom: 5px;
-  font-size: 0.8rem;
+.display--grid {
+  display: grid;
+}
+
+.display--flex {
+  display: flex;
+}
+
+.display__align-items--center {
+  align-items: center;
+}
+
+.display__justify-content--space-between {
+  justify-content: space-between;
+}
+
+.padding--5px {
+  padding: 5px;
+}
+
+.padding--10px {
+  padding: 10px;
+}
+
+.border-radius--5px {
+  border-radius: 5px;
+}
+
+.border--1px {
+  border: 1px solid var(--color-foreground);
+}
+
+.border--none {
+  border: none;
+}
+
+.margin--5px {
+  margin: 5px;
 }

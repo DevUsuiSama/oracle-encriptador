@@ -22,7 +22,7 @@ export default class Lista {
   }
 
   /**
-   * @param {(encriptador: Encriptador) => string} funcion 
+   * @param {(encriptador: Encriptador) => string} funcion
    */
   agregar(funcion) {
     this.encriptador.validar(() => {
@@ -30,7 +30,13 @@ export default class Lista {
         this.lista.removeChild(this.lista.children[0]);
         Lista.estadoLista = !Lista.estadoLista;
       }
-      const ITEM = new Item("copiar texto", ["font-orbitron", "item"]);
+      const ITEM = new Item("copiar texto", [
+        "item",
+        "text",
+        "display--flex",
+        "display__align-items--center",
+        "display__justify-content--space-between"
+      ]);
       ITEM.setContenido(funcion(this.encriptador));
       ITEM.setFuncion(this.encriptador.copiar);
       this.lista.appendChild(ITEM.getElemento());

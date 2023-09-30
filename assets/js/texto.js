@@ -31,12 +31,20 @@ export default class Texto {
   }
 
   /**
+   * A modo de pregunta, ¿esta sin numeros?
+   * @returns {boolean}
+   */
+  estaSinNumeros() {
+    return this.texto === this.texto.replace(/[\d]/g, "");
+  }
+
+  /**
    * A modo de pregunta, ¿esta sin acentos?
    * @returns {boolean}
    */
   estaSinAcentos() {
     return (
-      this.texto === this.texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      this.texto === this.texto.replace(/[\u0300-\u036f]/g, "")
     );
   }
 
@@ -66,9 +74,10 @@ export default class Texto {
       ? alert("Necesitas escribir al menos una letra")
       : !this.estaEnMinuscula() ||
         !this.estaSinAcentos() ||
+        !this.estaSinNumeros() ||
         !this.estaSinCaracteresEspeciales()
       ? alert(
-          "El texto debe de estar en minúscula, sin acentos y sin caracteres especiales"
+          "El texto debe de estar en minúscula, sin acentos, sin números y sin caracteres especiales"
         )
       : funcion();
   }

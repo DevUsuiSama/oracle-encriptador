@@ -10,8 +10,8 @@ import Modo from "./modo.js";
 
 function main() {
   const T_BUTTON = document.getElementById("modo");
-  const T_DIV = document.getElementById("lista-de-botones");
-  const T_UL = document.getElementById("lista-encriptado-desencriptado");
+  const T_DIV = document.getElementById("lista-botones");
+  const T_UL = document.getElementById("lista-resultado");
   const T_TEXTAREA = document.getElementById("texto");
   const MODO = new Modo(document.body, T_BUTTON);
 

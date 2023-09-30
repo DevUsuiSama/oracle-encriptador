@@ -6,57 +6,72 @@
 <html lang="es-AR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Usui, José Fernando">
-    <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Encriptador-Desencriptador">
-    <meta property="og:description" content="App básico para encriptar y desencriptar">
-    <meta property="og:type" content="website">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador-Desencriptador</title>
-    <meta name="theme-color" content="#00FFFF">
-    <link rel="shortcut icon" href="assets/icon/crypto.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Usui, José Fernando">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Encriptador-Desencriptador">
+  <meta property="og:description" content="App básico para encriptar y desencriptar">
+  <meta property="og:type" content="website">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador-Desencriptador</title>
+  <meta name="theme-color" content="#00FFFF">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="shortcut icon" href="assets/icon/crypto.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles/reset.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
-<body>
-    <header class="box-shadow-white">
-        <div>
-            <h1 class="font-orbitron">Encriptador-Desencriptador</h1>
-        </div>
-        <div>
-            <button id="modo" class="font-orbitron">Light</button>
-        </div>
-    </header>
-    <main class="box-shadow-white">
-        <div>
-            <textarea name="text" id="texto" cols="30" rows="10" maxlength="500" required></textarea>
-        </div>
-        <div id="lista-de-botones">
-            <button class="font-orbitron" title="Limpiar el area de texto">Limpiar</button>
-            <button class="font-orbitron">Encriptar</button>
-            <button class="font-orbitron">Desencriptar</button>
-        </div>
-        <div>
-            <ul id="lista-encriptado-desencriptado">
-                <li class="font-orbitron">
-                    >> No hay nada encriptado. 😐 &#60;&#60;
-                </li>
-            </ul>
-        </div>
-    </main>
-    <!-- script -->
-    <script type="module" src="assets/js/main.js"></script>
-    <!-- ------ -->
-    <footer class="box-shadow-white font-orbitron">
-        @DevUsuiSama 2023&nbsp;&nbsp;||
-        <a href="https://www.flaticon.es/iconos-gratis/descentralizado" title="descentralizado iconos">
-            Descentralizado iconos creados por Soni Sokell - Flaticon
-        </a>
-    </footer>
+<body class="modo--light">
+  <header class="header display--grid border-radius--5px margin--5px">
+    <div>
+      <h1 class="text text--larger text--bold">Encriptador-Desencriptador</h1>
+    </div>
+    <div>
+      <button class="button text text--bold border--none border-radius--5px padding--5px" id="modo">Dark</button>
+    </div>
+  </header>
+  <main class="crypter display--grid border-radius--5px margin--5px">
+    <div class="display--grid padding--10px">
+      <textarea
+        class="text-area text text--larger border--1px border-radius--5px"
+        name="text"
+        id="texto"
+        cols="30"
+        rows="10"
+        maxlength="500"
+        placeholder="Introduzca algún texto a encriptar o desencriptar."
+        required
+      ></textarea>
+    </div>
+    <div class="display--grid padding--10px crypter__division--columns" id="lista-botones">
+      <button class="button border-radius--5px border--1px padding--10px" title="Limpiar el area de texto">Limpiar</button>
+      <button class="button border-radius--5px border--1px padding--10px">Encriptar</button>
+      <button class="button border-radius--5px border--1px padding--10px">Desencriptar</button>
+    </div>
+    <div class="display--grid padding--10px">
+      <ul class="list display--flex border--1px border-radius--5px padding--10px" id="lista-resultado">
+        <li class="text text--center">
+          >> No hay nada encriptado. 😐 &#60;&#60;
+        </li>
+      </ul>
+    </div>
+  </main>
+  <!-- script -->
+  <script type="module" src="assets/js/main.js"></script>
+  <!-- ------ -->
+  <footer class="footer border-radius--5px margin--5px text text-small">
+    @DevUsuiSama 2023&nbsp;&nbsp;||
+    <a
+      class="link"
+      href="https://www.flaticon.es/iconos-gratis/descentralizado"
+      title="descentralizado iconos"
+    >
+      Descentralizado iconos creados por Soni Sokell - Flaticon
+    </a>
+  </footer>
+  <div style="height: 5px;"></div>
 </body>
 
 </html>

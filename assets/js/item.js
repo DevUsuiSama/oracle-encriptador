@@ -27,6 +27,7 @@ export default class Item {
    */
   setContenido(contenido) {
     this.li.textContent = contenido;
+    this.li.innerHTML += `&nbsp;<span class="material-symbols-outlined">content_copy</span>`;
   }
 
   /**
